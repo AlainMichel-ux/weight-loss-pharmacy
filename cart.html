@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div id="home" class="logo">
+                    <a href="index.html"><img src="images/logo.png" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">All Products</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="message.html">Contact us</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </nav>
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+    </div>
+
+    <h1>Your Cart</h1>
+    <div id="cart-items"></div>
+
+    <a href="product.html" class="btn">Continue Shopping</a>
+    <a href="checkout.html" class="btn">Proceed to Checkout</a>
+   <!----footer-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-2">
+                <img src="images/logo.png" alt="">
+                <p>At Weight Loss Pharmacy, your health and satisfaction are our top priorities. We are committed
+                     to providing high-quality, safe, and effective weight loss solutions to help you achieve your 
+                     goals with confidence. Thank you for trusting us on your wellness journey.
+
+                </p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful links</h3>
+                <ul>
+                    <a href="about.html"><li>About Us</li></a>
+                    <a href="product.html"><li>All Products</li></a>
+                   <a href="reviews.html"> <li>Reviews</li></a>
+                    <a href="message.html"><li>Contact Us</li></a>
+                    
+                </ul>
+            </div>
+            <p class="copyright">
+                Copyright 2025 - Weight Loss Pharmacy
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push({ name: name, price: price });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount(); // Update the counter right after adding
+    alert(name + " has been added to your cart.");
+}
+
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle (){
+        if(MenuItems.style.maxHeight == "0px")
+    {
+        MenuItems.style.maxHeight ="200px";
+    }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let cartDiv = document.getElementById('cart-items');
+
+        function displayCart() {
+            if (cart.length === 0) {
+                cartDiv.innerHTML = "<p>Your cart is empty.</p>";
+                return;
+            }
+
+            let total = 0;
+            let html = "<ul>";
+
+            cart.forEach((item, index) => {
+                html += `<li>
+                            ${item.name} - $${item.price}
+                            <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+                         </li>`;
+                total += item.price;
+            });
+
+            html += "</ul>";
+            html += `<h3>Total: $${total}</h3>`;
+
+            cartDiv.innerHTML = html;
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+        }
+
+        displayCart();
+    </script>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/685e79170770ab190e573ffc/1iuogi1f0';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>

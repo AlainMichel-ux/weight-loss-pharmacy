@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Loss Pharmacy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div  id="home" class="logo">
+                <a href="index.html">
+                <img src="images/logo.png" width="125px">
+            </a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="product.html">All Products</a>
+                    </li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="message.html">Contact us</a>
+                    </li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+           </div>
+           <div class="row">
+                <div class="col-2">
+                    <h1>WEIGHT LOSS PHARMACY <br>Medicine </h1>
+                    <p>At Weight Loss Pharmacy, we specialize in providing safe, effective, and science-backed solutions to help you reach your weight loss goals.
+                         Whether you're just beginning your journey or seeking continued support, our expert team and carefully selected products are here to support you every step of the way. 
+                        Your health, confidence, and well-being are at the heart of everything we do. Start today—because a healthier, happier you begins here!
+                    </p>
+                    <a href="#products" class="btn">Explore Now &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="images/frontimage.png" alt="">
+                </div>
+           </div>
+    </div>
+</div>
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()">
+</div>
+
+
+<!-- Floating Cart Icon -->
+<div class="floating-cart">
+    <a href="cart.html" class="cart-link">
+        🛒 <span id="cart-count">0</span>
+    </a>
+</div>
+  <!-------featured products------>
+
+    <div class="small-container">
+        <h2 id="products" class="title">Weight Loss Medications</h2>
+
+        <div class="row">
+            <!-- Products -->
+            <div class="col-4">
+                <a href="productdetails.html?name=Mounjaro&price=240&image=images/product1.jpg&desc=Effective%20weight%20loss%20medication%20with%20excellent%20results.">
+                    <img src="images/product1.jpg" alt="Mounjaro">
+                </a>
+                <h4>Mounjaro</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$240</p>
+                <button class="btn" onclick="addToCart('Mounjaro', 240)">Add to cart &#8594;</button>
+            </div>
+
+            <div class="col-4">
+                <a href="productdetails.html?name=Wegovy&price=215&image=images/product2.jpg&desc=Powerful%20weight%20loss%20solution%20that%20supports%20appetite%20control.">
+                    <img src="images/product2.jpg" alt="Wegovy">
+                </a>
+                <h4>Wegovy</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$215</p>
+                <button class="btn" onclick="addToCart('Wegovy', 215)">Add to cart &#8594;</button>
+            </div>
+
+            <div class="col-4">
+                <a href="productdetails.html?name=Semaglutide&price=120&image=images/product3.jpg&desc=Clinically%20proven%20weight%20loss%20medication%20for%20safe%20and%20steady%20results.">
+                    <img src="images/product3.jpg" alt="Semaglutide">
+                </a>
+                <h4>Semaglutide</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                </div>
+                <p>$120</p>
+                <button class="btn" onclick="addToCart('Semaglutide', 120)">Add to cart &#8594;</button>
+            </div>
+
+            <div class="col-4">
+                <a href="productdetails.html?name=Retatrutide&price=120&image=images/product4.jpg&desc=New%20generation%20weight%20loss%20solution%20for%20fast%20results.">
+                    <img src="images/product4.jpg" alt="Retatrutide">
+                </a>
+                <h4>Retatrutide</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$120</p>
+                <button class="btn" onclick="addToCart('Retatrutide', 120)">Add to cart &#8594;</button>
+            </div>
+        </div>
+
+        <!-- Additional products -->
+        <div class="row">
+            <div class="col-4">
+                <a href="productdetails.html?name=Test%20C%20250&price=25&image=images/Product5.jpg&desc=Affordable%20weight%20management%20solution%20for%20daily%20use.">
+                    <img src="images/Product5.jpg" alt="Test C 250">
+                </a>
+                <h4>Test C 250</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$25</p>
+                <button class="btn" onclick="addToCart('Test C 250', 25)">Add to cart &#8594;</button>
+            </div>
+
+            <div class="col-4">
+                <a href="productdetails.html?name=Mounjaro%20KwikPen&price=220&image=images/Product6.jpg&desc=Convenient%20pen%20injection%20for%20effective%20weight%20control.">
+                    <img src="images/Product6.jpg" alt="Mounjaro KwikPen">
+                </a>
+                <h4>Mounjaro KwikPen</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$220</p>
+                <button class="btn" onclick="addToCart('Mounjaro KwikPen', 220)">Add to cart &#8594;</button>
+            </div>
+
+            <div class="col-4">
+                <a href="productdetails.html?name=Ozempic&price=230&image=images/product7.webp&desc=Highly%20recommended%20weight%20loss%20solution%20for%20consistent%20results.">
+                    <img src="images/product7.webp" alt="Ozempic">
+                </a>
+                <h4>Ozempic</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                </div>
+                <p>$230</p>
+                <button class="btn" onclick="addToCart('Ozempic', 230)">Add to cart &#8594;</button>
+            </div>
+
+            <div class="col-4">
+                <a href="productdetails.html?name=Zepbound&price=280&image=images/product8.webp&desc=Premium%20weight%20loss%20support%20for%20long-term%20success.">
+                    <img src="images/product8.webp" alt="Zepbound">
+                </a>
+                <h4>Zepbound</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$280</p>
+                <button class="btn" onclick="addToCart('Zepbound', 280)">Add to cart &#8594;</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <a href="productdetails.html?name=Rirzepatide&price=170&image=images/product9.webp&desc=Reliable%20weight%20management%20support%20for%20everyday%20use.">
+                    <img src="images/product9.webp" alt="Rirzepatide">
+                </a>
+                <h4>Rirzepatide</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$170</p>
+                <button class="btn" onclick="addToCart('Rirzepatide', 170)">Add to cart &#8594;</button>
+            </div>
+
+            <div class="col-4">
+                <a href="productdetails.html?name=BPC&price=150&image=images/product10.webp&desc=Effective%20for%20overall%20weight%20and%20health%20management.">
+                    <img src="images/product10.webp" alt="BPC">
+                </a>
+                <h4>BPC</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i>
+                </div>
+                <p>$150</p>
+                <button class="btn" onclick="addToCart('BPC', 150)">Add to cart &#8594;</button>
+            </div>
+
+            <div class="col-4">
+                <a href="productdetails.html?name=Rybelsus&price=170&image=images/product11.webp&desc=Trusted%20oral%20weight%20loss%20solution%20for%20convenient%20use.">
+                    <img src="images/product11.webp" alt="Rybelsus">
+                </a>
+                <h4>Rybelsus</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                </div>
+                <p>$170</p>
+                <button class="btn" onclick="addToCart('Rybelsus', 170)">Add to cart &#8594;</button>
+            </div>
+
+            <div class="col-4">
+                <a href="productdetails.html?name=Phentermine&price=99&image=images/product12.webp&desc=Popular%20appetite%20suppressant%20for%20effective%20weight%20loss.">
+                    <img src="images/product12.webp" alt="Phentermine">
+                </a>
+                <h4>Phentermine</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                </div>
+                <p>$99</p>
+                <button class="btn" onclick="addToCart('Phentermine', 99)">Add to cart &#8594;</button>
+                </div>
+            <!-- Product 1 -->
+             <div class="row">
+            <div class="col-4">
+                <a href="productdetails.html?name=Saxenda&price=180&image=images/product13.webp&desc=Powerful%20appetite%20control%20solution.%20Usage:%20Daily%20injection.%20Side%20effects:%20Nausea,%20diarrhea,%20constipation.">
+                    <img src="images/product13.webp" alt="Saxenda">
+                </a>
+                <a href="productdetails.html?name=Saxenda&price=180&image=images/product13.webp&desc=Powerful%20appetite%20control%20solution.%20Usage:%20Daily%20injection.%20Side%20effects:%20Nausea,%20diarrhea,%20constipation.">
+                    <h4>Saxenda</h4>
+                </a>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                </div>
+                <p>$180</p>
+                <button class="btn" onclick="addToCart('Saxenda', 180)">Add to cart &#8594;</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-4">
+                <a href="productdetails.html?name=NAD%2B&price=125&image=images/product14.webp&desc=Supports%20energy%20production%20and%20cellular%20health.%20Usage:%20Oral%20capsule%20daily.%20Side%20effects:%20Mild%20nausea.">
+                    <img src="images/product14.webp" alt="NAD+">
+                </a>
+                <a href="productdetails.html?name=NAD%2B&price=125&image=images/product14.webp&desc=Supports%20energy%20production%20and%20cellular%20health.%20Usage:%20Oral%20capsule%20daily.%20Side%20effects:%20Mild%20nausea.">
+                    <h4>NAD+</h4>
+                </a>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$125</p>
+                <button class="btn" onclick="addToCart('NAD+', 125)">Add to cart &#8594;</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-4">
+                <a href="productdetails.html?name=Bioboost&price=110&image=images/product15.webp&desc=Natural%20metabolism%20booster.%20Usage:%20Oral%20daily.%20Side%20effects:%20Minimal.">
+                    <img src="images/product15.webp" alt="Bioboost">
+                </a>
+                <a href="productdetails.html?name=Bioboost&price=110&image=images/product15.webp&desc=Natural%20metabolism%20booster.%20Usage:%20Oral%20daily.%20Side%20effects:%20Minimal.">
+                    <h4>Bioboost</h4>
+                </a>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$110</p>
+                <button class="btn" onclick="addToCart('Bioboost', 110)">Add to cart &#8594;</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-4">
+                <a href="productdetails.html?name=Glutathione&price=100&image=images/product16.webp&desc=Antioxidant%20and%20detox%20support.%20Usage:%20Injection%20weekly.%20Side%20effects:%20Rare.">
+                    <img src="images/product16.webp" alt="Glutathione">
+                </a>
+                <a href="productdetails.html?name=Glutathione&price=100&image=images/product16.webp&desc=Antioxidant%20and%20detox%20support.%20Usage:%20Injection%20weekly.%20Side%20effects:%20Rare.">
+                    <h4>Glutathione</h4>
+                </a>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                </div>
+                <p>$100</p>
+                <button class="btn" onclick="addToCart('Glutathione', 100)">Add to cart &#8594;</button>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col-4">
+                <a href="productdetails.html?name=Lipo%20C&price=120&image=images/product17.webp&desc=Fat%20burning%20injection%20therapy.%20Usage:%20Twice%20a%20week.%20Side%20effects:%20Mild%20discomfort%20at%20injection%20site.">
+                    <img src="images/product17.webp" alt="Lipo C">
+                </a>
+                <a href="productdetails.html?name=Lipo%20C&price=120&image=images/product17.webp&desc=Fat%20burning%20injection%20therapy.%20Usage:%20Twice%20a%20week.%20Side%20effects:%20Mild%20discomfort%20at%20injection%20site.">
+                    <h4>Lipo C</h4>
+                </a>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$120</p>
+                <button class="btn" onclick="addToCart('Lipo C', 120)">Add to cart &#8594;</button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <center><a href="cart.html" class="btn">Go to Cart</a></center>
+    </div>
+<!----footer-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-2">
+                <img src="images/logo.png" alt="">
+                <p>At Weight Loss Pharmacy, your health and satisfaction are our top priorities. We are committed
+                     to providing high-quality, safe, and effective weight loss solutions to help you achieve your 
+                     goals with confidence. Thank you for trusting us on your wellness journey.
+
+                </p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful links</h3>
+                <ul>
+                    <a href="about.html"><li>About Us</li></a>
+                    <a href="product.html"><li>All Products</li></a>
+                   <a href="reviews.html"> <li>Reviews</li></a>
+                    <a href="message.html"><li>Contact Us</li></a>
+
+                </ul>
+            </div>
+            <p class="copyright">
+                Copyright 2025 - Weight Loss Pharmacy
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+    
+      // Function to update the cart count in the header
+    function updateCartCount() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        document.getElementById('cart-count').textContent = cart.length;
+    }
+
+    updateCartCount();
+
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle (){
+        if(MenuItems.style.maxHeight == "0px")
+    {
+        MenuItems.style.maxHeight ="200px";
+    }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+
+    function searchProducts() {
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let productCards = document.querySelectorAll('.col-4');
+
+    productCards.forEach(function(card) {
+        let productName = card.querySelector('h4').textContent.toLowerCase();
+        if (productName.includes(input)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+   function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Check if product already exists in the cart
+    let existingProduct = cart.find(item => item.name === name);
+
+    if (existingProduct) {
+        alert(name + " is already in your cart.");
+    } else {
+        cart.push({ name: name, price: price });
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        alert(name + " has been added to your cart.");
+    }
+}
+
+    // Function to update cart count in the floating cart
+    function updateCartCount() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        document.getElementById('cart-count').textContent = cart.length;
+    }
+
+    // 👇 Ensure the cart count is displayed correctly when the page loads
+    updateCartCount();
+</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/685e79170770ab190e573ffc/1iuogi1f0';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>

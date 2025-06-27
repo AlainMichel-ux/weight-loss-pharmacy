@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Weight Loss Pharmacy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div id="home" class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" width="125px">
+                    </a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">All Products</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="message.html">Contact us</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </nav>
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Cart Icon -->
+    <div class="floating-cart">
+        <a href="cart.html" class="cart-link">
+            🛒 <span id="cart-count">0</span>
+        </a>
+    </div>
+
+    <!-- Product Detail Section -->
+    <div class="small-container single-product" id="product-detail">
+        <!-- Product details will be loaded here -->
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-2">
+                    <img src="images/logo.png" alt="">
+                    <p>At Weight Loss Pharmacy, your health and satisfaction are our top priorities. We provide high-quality, safe, and effective weight loss solutions to help you achieve your goals with confidence.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <a href="about.html"><li>About Us</li></a>
+                        <a href="product.html"><li>All Products</li></a>
+                        <a href="reviews.html"><li>Reviews</li></a>
+                        <a href="message.html"><li>Contact Us</li></a>
+                    </ul>
+                </div>
+                <p class="copyright">
+                    Copyright 2025 - Weight Loss Pharmacy
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Floating cart update
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            document.getElementById('cart-count').textContent = cart.length;
+        }
+
+        updateCartCount();
+
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+
+        // Load product details from URL
+        function loadProductDetails() {
+            const params = new URLSearchParams(window.location.search);
+            const name = params.get('name');
+            const price = params.get('price');
+            const image = params.get('image');
+            const desc = params.get('desc');
+
+            const productDetailContainer = document.getElementById('product-detail');
+
+            if (name && price && image && desc) {
+                productDetailContainer.innerHTML = `
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="${image}" alt="${name}" width="100%">
+                        </div>
+                        <div class="col-2">
+                            <h1>${name}</h1>
+                            <h4>$${price}</h4>
+                            <p>${decodeURIComponent(desc)}</p>
+                            <p>This product is a scientifically backed weight loss solution recommended by experts to support your weight management goals effectively and safely.</p>
+                            <button class="btn" onclick="addToCart('${name}', ${price})">Add to Cart</button>
+                            <br><br>
+                            <a href="cart.html" class="btn">View Cart</a>
+                        </div>
+                    </div>
+                `;
+            } else {
+                productDetailContainer.innerHTML = '<h2>Product not found.</h2>';
+            }
+        }
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Check if product already exists in the cart
+            let existingProduct = cart.find(item => item.name === name);
+
+            if (existingProduct) {
+                alert(name + " is already in your cart.");
+            } else {
+                cart.push({ name: name, price: price });
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartCount();
+                alert(name + " has been added to your cart.");
+            }
+        }
+
+        loadProductDetails();
+    </script>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/685e79170770ab190e573ffc/1iuogi1f0';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>

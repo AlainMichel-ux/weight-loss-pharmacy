@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews - Weight Loss Pharmacy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .testimonial {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+
+        .testimonial .small-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .testimonial .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .testimonial .col-3 {
+            flex-basis: 30%;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .testimonial .col-3:hover {
+            transform: translateY(-10px);
+        }
+
+        .testimonial img {
+            width: 80px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+
+        .testimonial i.fa-quote-left {
+            font-size: 30px;
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
+
+        .testimonial .rating i {
+            color: #f39c12;
+            margin: 2px;
+        }
+
+        .testimonial h3 {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .testimonial p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #27ae60;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        .btn:hover {
+            background-color: #219150;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div id="home" class="logo">
+                    <a href="index.html"><img src="images/logo.png" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">All Products</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="message.html">Contact us</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </nav>
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+    </div>
+
+    <!-- Reviews Section -->
+    <div class="testimonial">
+    <div class="small-container">
+        <h1 style="text-align:center; margin-bottom: 40px;">What Our Customers Say</h1>
+        <div class="row">
+
+            <!-- Review 1 -->
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                <p>I’ve struggled with my weight for years, but after starting with Mounjaro from Weight Loss Pharmacy, my life has changed. I’ve lost over 10 kg in just three months and I feel more energetic and confident. The support from this pharmacy is outstanding!</p>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                </div>
+                <img src="images/testimony1.webp" alt="">
+                <h3>Peter Revnson</h3>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                <p>Wegovy has been a life-saver for me. I’ve tried so many weight loss solutions, but this is the only one that really worked without making me feel sick or tired. I’ve lost significant weight and I feel amazing! Highly recommend Weight Loss Pharmacy.</p>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                </div>
+                <img src="images/testimony2.webp" alt="">
+                <h3>William Grayson</h3>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                <p>After using Semaglutide from Weight Loss Pharmacy, I can say it truly works. I’ve lost stubborn weight that I couldn’t shed before. The ordering process was smooth and the team was so helpful. I feel healthier and more motivated than ever!</p>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                </div>
+                <img src="images/testimonyy3.webp" alt="">
+                <h3>Sarah Bustamante</h3>
+            </div>
+
+        </div>
+        <center><a href="index.html" class="btn">Back to Home</a></center>
+    </div>
+</div>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-2">
+                    <img src="images/logo.png" alt="">
+                    <p>Your trusted partner in safe, effective, and reliable weight loss solutions. Thank you for choosing Weight Loss Pharmacy.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="product.html">All Products</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="message.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <p class="copyright">Copyright 2025 - Weight Loss Pharmacy</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/685e79170770ab190e573ffc/1iuogi1f0';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+
+</html>
